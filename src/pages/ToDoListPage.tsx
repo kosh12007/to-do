@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { Form } from "../components/Form/Form"
-import { Header } from "../components/Header/Header"
 import { ToDoList } from "../components/ToDoList/ToDoList"
 import { ToDo } from "../models/todo-item"
+import { toast, Toaster } from 'react-hot-toast';
+
 
 
 
@@ -20,6 +21,7 @@ export const ToDoListPage = () => {
             isDone: false
         }
         setTodos([...todos, newToDo])
+        toast.success('Задача успешно добавлена');
 
     }
 
@@ -29,21 +31,24 @@ export const ToDoListPage = () => {
                 todo.isDone = !todo.isDone
             }
             return todo
+            
         })
         setTodos(newTodos)
+        toast.success('Статус задачи успешно обновлен');
     }
 
     const deleteToDo = (toDoItem: ToDo) => {
         const newTodos = todos.filter((todo) => todo.id !== toDoItem.id)
         setTodos(newTodos)
+        toast.success('Задача успешно удалена');
     }
 
 
     return (
         <>
-            <Header />
             <Form creatNewToDo={creatNewToDo} />
             <ToDoList todos={todos} updateToDo={updateToDo} deleteToDo={deleteToDo} />
+            <Toaster position="bottom-right" />
         </>
     )
 }
