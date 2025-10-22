@@ -3,9 +3,10 @@ import classes from './ListItem.module.scss'
 
 export const ListItem = ({ todo }: { todo: ToDo }) => {
     return (
-        <a 
-        className={`${classes.link} ${todo.isDone ? classes.done : classes.noDone} `} 
-        target="_blink"
+        <a
+        className={`${classes.link} ${todo.isDone ? classes.done : classes.noDone} `}
+        target="_blank"
+        rel="noreferrer"
         href={`/list/${todo.id}`}
         > {todo.text} </a>
     )
