@@ -1,24 +1,13 @@
-import { NavLink } from 'react-router-dom'
-import classes from './Header.module.scss'
+// import classes from './Header.module.scss'
+import { HeaderContainer, HeaderNavLink, HeaderStyle } from './Header.styled'
 
 export const Header = () => {
-    const getActiveClass = ({ isActive }: { isActive: boolean }): string => {
-        return isActive ? `${classes.active} ${classes.linc}` : classes.linc
-
-    }
-
     return (
-        <header className={classes.header}>
-            <div className={classes.container}>
-                <NavLink
-                    to="/"
-                    className={getActiveClass}
-                >ToDo</NavLink>
-                <NavLink
-                    to="/list"
-                    className={getActiveClass}
-                >List</NavLink>
-            </div>
-        </header>
+        <HeaderStyle>
+            <HeaderContainer>
+                <HeaderNavLink to="/"  >ToDo</HeaderNavLink>
+                <HeaderNavLink to="/list" >List</HeaderNavLink>
+            </HeaderContainer>
+        </HeaderStyle>
     )
 }

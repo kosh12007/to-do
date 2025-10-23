@@ -1,59 +1,43 @@
-* {
-    box-sizing: border-box;
-}
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-body {
-    background-color: #edf0f1;
-    padding: 50px 0 0 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.429;
-    color: black;
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.not-found-content {
+export const Content = styled.div`
     text-align: center;
     padding: 40px 20px;
     max-width: 600px;
     margin: 0 auto;
-}
+`
 
-.not-found-title {
+export const Title = styled.h1`
     font-size: 100px;
     font-weight: bold;
     color: #ff6b6b;
     margin: 0 0 20px 0;
     line-height: 1;
-}
+`
 
-.not-found-message {
+export const Message = styled.p`
     font-size: 24px;
     font-weight: bold;
     color: #333;
     margin: 0 0 10px 0;
-}
+`
 
-.not-found-subtitle {
+export const Subtitle = styled.p`
     font-size: 16px;
     color: #666;
     margin: 0 0 30px 0;
-}
+`
 
-.not-found-actions {
+export const Actions = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-}
+`
 
-.not-found-link {
+export const Link404 = styled(Link)<{ to: string }>`
     display: inline-block;
     padding: 12px 30px;
     background-color: #4e73df;
@@ -64,8 +48,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
 
-.not-found-link:hover {
+    &:hover {
     background-color: #2e59d9;
-}
+    }
+`

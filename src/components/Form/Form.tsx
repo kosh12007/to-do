@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './Form.scss'
+import { FormBlock, FormControl, FormField, FormLabel, FormWrapper } from './form.styled'
+import plusIcon from '../../assets/images/plus.png'
 
 
 
@@ -17,15 +18,15 @@ export const Form = (props: { creatNewToDo: Function }) => {
 
 
     return (
-        <div className="form-wrapper">
-            <form action="#" onSubmit={fomSubmit}>
-                <label>
-                    <input value = {text}
+        <FormWrapper>
+            <FormBlock action="#" onSubmit={fomSubmit}>
+                <FormLabel>
+                    <FormField value = {text}
                     type="text" 
                     onChange={(e) => setText(e.target.value)} />
-                    <button></button>
-                </label>
-            </form>
-        </div>
+                    <FormControl icon={plusIcon}/>
+                </FormLabel>
+            </FormBlock>
+        </FormWrapper>
     )
 }
