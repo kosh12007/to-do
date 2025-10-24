@@ -18,15 +18,16 @@
     "react-hot-toast": "^2.6.0",
     "react-redux": "^8.1.3",
     "react-router-dom": "^7.9.4",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-toastify": "^11.0.5",
-    "styled-components": "^6.1.19",
+    "styled-components": "^5.0.0",
     "styled-normalize": "^8.1.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
+    "@craco/craco": "^5.9.0",
+    "@types/styled-components": "^5.1.35",
     "sass": "^1.93.2"
   },
   "scripts": {

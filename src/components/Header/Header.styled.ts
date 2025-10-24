@@ -19,6 +19,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 `
 
 export const HeaderNavLink = styled(NavLink)<{ to: string }> `
@@ -29,4 +30,11 @@ export const HeaderNavLink = styled(NavLink)<{ to: string }> `
     &.active {
         color: #ffffff33;
     }
+`
+
+export const ToggleButton = styled.div`
+position: absolute;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
 `
