@@ -6,3 +6,7 @@ export interface Theme {
     }
 
 }
+
+export interface Themes {
+    [key: string]: Theme
+}
